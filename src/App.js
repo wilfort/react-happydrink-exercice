@@ -28,9 +28,6 @@ class App extends Component {
 handleChange(e){
     this.setState({searchStringUser: e.target.value});
 }
-barIdChange(e){
-    this.setState({barId: e.target.value});
-}
 barNameChange(e){
     this.setState({barName: e.target.value});
 }
@@ -68,7 +65,7 @@ addBar = () =>{
         compDisLik:0,
         compLik:0
     };
-    this.setState({establishments:this.state.establishments.concat(item)})
+    this.setState({establishments:this.state.establishments.concat(item),barName:"",barDescription:""})
 }
 
 componentWillMount () {
